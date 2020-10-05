@@ -8,7 +8,7 @@ package dataordering;
 public class DataOrdering {
 
     public static void main(String[] args) {
-          DynamicList DynamicList = new DynamicList();
+        DynamicList DynamicList = new DynamicList();
         
         DynamicList.add(5, 0);
         DynamicList.add(6, 1);
@@ -22,9 +22,9 @@ public class DataOrdering {
         
         System.out.println(DynamicList.imprimir());
         
-        System.out.println("Existe o número 9: " + DynamicList.exist(9));
+        System.out.println("Existe o número 9 na lista dinamica?: " + DynamicList.exist(9));
         
-        System.out.println("A lista está vazia: " + DynamicList.isEmpty());
+        System.out.println("A lista dinamica está vazia: " + DynamicList.isEmpty());
         
         DynamicList.set(1, 1); 
         
