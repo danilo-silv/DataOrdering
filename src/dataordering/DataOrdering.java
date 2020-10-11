@@ -1,5 +1,7 @@
 package dataordering;
 
+import dataordering.lists.DynamicList;
+
 /**
  *
  * @author danilo

@@ -1,4 +1,4 @@
-package dataordering;
+package dataordering.lists;
 
 /**
  *
