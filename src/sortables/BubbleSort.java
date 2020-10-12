@@ -19,7 +19,7 @@ public class BubbleSort extends Sort{
         do{
             inverted = false;
             for(int i = 1; i < size; i++){
-                //comparisonsNumber++;
+                comparisonsNumber++;
                 if(array[i - 1] > array[i]){
                     invertItems(i-1, i);
                     inverted = true;

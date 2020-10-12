@@ -1,4 +1,4 @@
-package dataordering.lists;
+package lists;
 
 public class No {
     int dado;
