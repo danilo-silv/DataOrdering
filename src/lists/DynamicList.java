@@ -1,9 +1,5 @@
 package lists;
 
-/**
- *
- * @author danilo
- */
 public class DynamicList {
     private int quantidade;
     private No inicio;

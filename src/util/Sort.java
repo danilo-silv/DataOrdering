@@ -1,9 +1,5 @@
 package util;
 
-/**
- *
- * @author danilo
- */
 public abstract class Sort {
 
     public int[] array;
