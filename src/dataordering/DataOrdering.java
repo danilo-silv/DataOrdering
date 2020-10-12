@@ -42,7 +42,7 @@ public class DataOrdering {
         for(int i = 0; i < vectorsNumber; i++){
             sortable.comparisonsNumber = 0;
             randomize(sortable.array);
-            sortable.sort();
+            sortable.sortAndRuntime(i);
             averageComparisons += sortable.comparisonsNumber;
         }
         averageComparisons = averageComparisons / vectorsNumber;
