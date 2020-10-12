@@ -2,10 +2,6 @@ package sortables;
 
 import util.Sort;
 
-/**
- *
- * @author danilo
- */
 public class SelectionSort extends Sort{
      public SelectionSort(int[] array) {
         super(array);

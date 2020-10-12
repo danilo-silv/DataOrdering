@@ -5,6 +5,7 @@ import util.Sort;
 import sortables.BubbleSort;
 import sortables.InsertionSort;
 import sortables.SelectionSort;
+import sortables.MergeSort;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -31,6 +32,7 @@ public class DataOrdering {
         algorithms.add(new BubbleSort(array));
         algorithms.add(new InsertionSort(array));
         algorithms.add(new SelectionSort(array));
+        algorithms.add(new MergeSort(array));
 
         System.out.println("\n-----------------------------------------\n"
                 + "List size: " + listSize

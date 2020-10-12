@@ -2,10 +2,6 @@ package sortables;
 
 import util.Sort;
 
-/**
- *
- * @author danilo
- */
 public class BubbleSort extends Sort{
     
     public BubbleSort(int[] array) {
