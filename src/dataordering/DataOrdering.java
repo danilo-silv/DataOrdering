@@ -36,7 +36,7 @@ public class DataOrdering {
 
         System.out.println("\n-----------------------------------------\n"
                 + "List size: " + listSize
-                + "\nNumber of arrays: " + vectorsNumber + "\n-----------------------------------------");
+                + "\nNumber of arrays: " + vectorsNumber + "\n-----------------------------------------\n");
         for (Sort sortable : algorithms) {
             sortSingleList(sortable, vectorsNumber);
         }
@@ -44,7 +44,6 @@ public class DataOrdering {
 
     public static void sortSingleList(Sort sortable, int vectorsNumber) {
         long averageComparisons = 0;
-        System.out.println("\n-----------------------------------------");
         System.out.println("****** " + sortable.getClass().getSimpleName() + " ******");
         for (int i = 0; i < vectorsNumber; i++) {
             sortable.comparisonsNumber = 0;
