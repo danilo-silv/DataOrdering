@@ -83,6 +83,7 @@ public class DynamicList {
             if (posicao == 0 && size() == 1) {
                 temporario = inicio.dado;
                 inicio = fim = null;
+                quantidade--;
                 return temporario;
             } else {
                 if (posicao == 0) {
