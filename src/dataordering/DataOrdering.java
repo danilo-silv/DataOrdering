@@ -17,8 +17,13 @@ import java.util.Random;
 public class DataOrdering {
 
     public static void main(String[] args) {
-        int[] sizes = {4};
-        int vectorsNumber = 4;
+//        PARA ATIVIDADE 
+//        int[] sizes = {100, 1000, 10000, 100000};
+//        int vectorsNumber = 10;
+
+//        PARA TESTE 
+        int[] sizes = {5, 10};
+        int vectorsNumber = 2;
 
         for (int size : sizes) {
             sortLists(size, vectorsNumber);
@@ -31,13 +36,15 @@ public class DataOrdering {
         ArrayList<Sort> algorithms = new ArrayList<>();
 
         algorithms.add(new BubbleSort(array));
-        algorithms.add(new InsertionSort(array));
-        algorithms.add(new SelectionSort(array));
-        algorithms.add(new MergeSort(array));
+//        algorithms.add(new InsertionSort(array));
+//        algorithms.add(new SelectionSort(array));
+//        algorithms.add(new MergeSort(array));
 
         System.out.println("\n-----------------------------------------\n"
                 + "List size: " + listSize
-                + "\nNumber of arrays: " + vectorsNumber + "\n-----------------------------------------\n");
+                + "\nNumber of arrays: " + vectorsNumber  
+                + "\nArray size number: " + listSize + "\n-----------------------------------------\n"
+        );
         for (Sort sortable : algorithms) {
             sortSingleList(sortable, listSortable, vectorsNumber);
         }
@@ -48,19 +55,19 @@ public class DataOrdering {
         System.out.println("****** " + sortable.getClass().getSimpleName() + " ******");
         System.out.println("LISTA é vazia: " + list.isEmpty());
         for (int i = 0; i < vectorsNumber; i++) {
-            System.out.println("ARRAY:" + (i + 1));
+            System.out.println("\nARRAY:" + (i + 1));
             sortable.comparisonsNumber = 0;
             randomize(sortable.array, list);
-            System.out.println("LISTA BEFORE: " + list.imprimir());
-            sortable.sortAndPrint();
-//            sortable.sortAndRuntime(i + 1);
+//            System.out.println("LISTA NÂO ORDENADA: " + list.imprimir());
+//            sortable.sortAndPrint(); // aqui vai fazer a ordenacao do array e imprimir os valores do array
+//            list.sortAndRuntime(sortable.getClass().getSimpleName()); 
+//            System.out.println("LISTA ORDENADA: " + list.imprimir());
+            sortable.sortAndRuntime(i + 1); // aqui vai fazer a ordenacao do array e imprimir o tempo de ordenacão
             averageComparisons += sortable.comparisonsNumber;
 
             for (int j = 0; j < sortable.array.length; j++) {
-               list.remove(0);
+               list.remove(0); //temos em tirar os valores da lista para inicar uma nova ordenação
             }
-            
-            System.out.println("LISTA AFTER: " + list.imprimir());
         }
 
         averageComparisons = averageComparisons / vectorsNumber;
@@ -73,7 +80,7 @@ public class DataOrdering {
         Random random = new Random();
         for (int i = 0; i < v.length; i++) {
             v[i] = random.nextInt(11);
-            list.add(v[i]);
+//            list.add(v[i]); //inserir o dado na lista
         }
     }
 

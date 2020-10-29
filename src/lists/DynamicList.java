@@ -1,15 +1,17 @@
 package lists;
 
 public class DynamicList {
+
     private int quantidade;
     private No inicio;
     private No fim;
+    private int comparisonsNumber;
 
     public DynamicList() {
         this.inicio = this.fim = null;
         this.quantidade = 0;
     }
-    
+
     public int size() {
         return quantidade;
     }
@@ -127,6 +129,57 @@ public class DynamicList {
         return true;
     }
 
+    public void sortAndRuntime(String name) {
+        System.out.println(name);
+        switch (name) {
+            case "BubbleSort":
+                // chamar funcao
+                break;
+            case "InsertionSort":
+                // chamar funcao 
+                break;
+
+            case "SelectionSort":
+                // chamar funcao 
+                break;
+            case "MergeSort":
+            default:
+                System.out.println("SEM OPCAO");
+        }
+    }
+
+//    public void invertItems() {
+//        No removido = auxiliar.proximo;
+//        temporario = removido.dado;
+//        auxiliar.proximo = removido.proximo;
+//
+//        No aux = inicio;
+//        inicio.pro inicio = aux;
+//    }
+
+//    public int bubbleSort() {
+//        int size = size();
+//        boolean inverted;
+//
+//        do {
+//            inverted = false;
+//            for (int i = 1; i < size; i++) {
+//                comparisonsNumber++;
+//                while (inicio != null) {
+//
+//                    if (inicio.dado > inicio.proximo.dado) {
+//                        int aux = inicio.dado;
+//                        inicio.dado = inicio.proximo.dado;
+//                        inicio.proximo.dado = aux;
+//                         inverted = true;
+//                    }
+//                    inicio = inicio.proximo;
+//                }
+//            }
+//        } while (inverted);
+//        return 0;
+//    }
+
     public int get(int posicao) throws Exception {
         if (posicao < size() && !isEmpty() && posicao >= 0) {
             int contador = 0;
@@ -135,9 +188,9 @@ public class DynamicList {
                 contador++;
                 auxiliar = auxiliar.proximo;
             }
-            
+
             return auxiliar.dado;
-        }else{
+        } else {
             throw new Exception("Deu pau");
         }
     }
@@ -155,5 +208,5 @@ public class DynamicList {
         }
         valores.append(")");
         return valores.toString();
-    } 
+    }
 }
